@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="surveyJS">
   <head>
     <title>Survey</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+   <!-- Optional theme -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="lib/angular.js"></script>
-    <script src="app.js"></script>
-    <script src="controllers/SurveyAController.js"></script>
-    <script src="controllers/SurveyBController.js"></script>
-    <script src="services/SurveyFactory.js"></script>
+   <!-- Latest compiled and minified JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   <script src="lib/angular.js"></script>
+     <script src="app.js"></script>
+
+    <script src="js/SurveyAController.js"></script>
+
   </head>
   <body>
     <div class="container" ng-controller="SurveyACtrl">
       <form class="" action="index.html" method="post">
         <div class="form-group">
-          <label for="questionA">{{questionA}}</label>
+          <label for="questionA">{{ questionA }}</label>
             <input type="text" name="questionA" class='form-control'>
         </div>
         <button type="submit">Submit</button>
