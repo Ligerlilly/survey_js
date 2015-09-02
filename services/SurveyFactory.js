@@ -6,4 +6,5 @@ surveyJS.factory('SurveyFactory', function SurveyFactory(){
     factory.answers.push(response);
     factory.answerText = null;
   };
+  return factory;
 });
