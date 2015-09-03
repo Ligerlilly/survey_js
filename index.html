@@ -16,23 +16,53 @@
     <script src="services/SurveyFactory.js"></script>
 
     <script src="controllers/SurveyAController.js"></script>
+    <script src="controllers/SurveyBController.js"></script>
 
   </head>
   <body>
-    <div class="container" ng-controller="SurveyACtrl">
+    <div class="container" ng-controller="SurveyACtrl" ng-hide='answersColor.length > 4'>
       <form class="" ng-submit='SurveyFactory.addAnswer()'>
         <div class="form-group">
           <label for="questionA">{{ questionA }}</label>
-            <input type="text" ng-model='SurveyFactory.answerText' class='form-control'>
+            <input type="text" ng-model='SurveyFactory.answerColor' class='form-control'>
         </div>
         <button type="submit">Submit</button>
       </form>
 
-      <ul>
-        <li ng-repeat='response in answers'>{{ response.answer }}</li>
-      </ul>
 
 
+
+
+
+    </div>
+    <div class='container' ng-controller='SurveyBCtrl' ng-hide='answersAnimal.length > 4'>
+
+      <form class="" ng-submit='SurveyFactory.addAnswer()'>
+        <div class="form-group">
+          <label for="questionB">{{ questionB }}</label>
+          <input type="text" ng-model='SurveyFactory.answerAnimal' class='form-control'>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+
+
+
+
+    </div>
+
+    <div class='row'  >
+
+      <div class='col-sm-6' ng-controller='SurveyACtrl' ng-show='answersColor.length > 4'>
+
+        <ul >
+          <li ng-repeat='response in answersColor'> {{ response.answer }}</li>
+        </ul>
+      </div>
+      <div class='col-sm-6' ng-controller='SurveyBCtrl' ng-show='answersAnimal.length > 4'>
+        <ul >
+          <li ng-repeat='response in answersAnimal'> {{ response.answer }}</li>
+        </ul>
+      </div>
     </div>
 
   </body>
